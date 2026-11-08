@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mariana &amp; Manuel · Confirma tu asistencia</title>
+  <meta name="description" content="Confirma tu asistencia a la boda de Mariana y Manuel">
+  <meta name="theme-color" content="#45432B">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/confirmar.css">
+</head>
+<body>
+<div class="pg">
+<nav class="nav" aria-label="Navegación">
+<a href="inicio.html">← Volver</a>
+<a href="detalles.html">Los detalles</a>
+</nav>
+
+<section style="padding: 10px 14px 110px">
+<div style="text-align: center; margin-bottom: 34px">
+<img src="assets/svg/swans-burdeos.svg" alt="" style="width: 110px; height: 96px">
+<h1 class="script" style="font-size: clamp(56px,7vw,88px)">Confirma tu asistencia</h1>
+<p class="sc" style="margin-top: 12px; font-size: 15px; color: #5A2A2B">Por favor confirma antes del [fecha límite]</p>
+</div>
+
+<div class="card">
+<form id="form-rsvp" novalidate style="position: relative; display: flex; flex-direction: column; gap: 34px">
+
+<label class="q"><span>Tu nombre completo *</span>
+<input type="text" id="r-nombre" autocomplete="name" required>
+</label>
+
+<div class="q" role="group" aria-label="¿Nos acompañarás en nuestra boda?"><p>¿Nos acompañarás en nuestra boda? *</p>
+<div class="opts" data-grupo="asiste">
+<button type="button" class="opt" data-valor="si" aria-pressed="false"><span class="box"></span>¡Claro! No me lo perdería</button>
+<button type="button" class="opt" data-valor="no" aria-pressed="false"><span class="box"></span>Te mando mucho cariño desde lejos</button>
+</div>
+</div>
+
+<div id="solo-si" hidden style="display: flex; flex-direction: column; gap: 34px">
+<div class="q" role="group" aria-label="¿Vienes con acompañante?"><p>¿Vienes con acompañante?</p>
+<div class="opts" data-grupo="acomp">
+<button type="button" class="opt" data-valor="si" aria-pressed="false"><span class="box"></span>Sí</button>
+<button type="button" class="opt" data-valor="no" aria-pressed="false"><span class="box"></span>No</button>
+</div>
+</div>
+
+<label class="q" id="campo-acomp" hidden><span>Nombre de tu acompañante</span>
+<input type="text" id="r-acomp">
+</label>
+
+<div class="q" role="group" aria-label="Preferencia de menú"><p>Elige tu preferencia de menú</p>
+<div class="opts" data-grupo="menu" data-multiple="true">
+<button type="button" class="opt" data-valor="Carne" aria-pressed="false"><span class="box"></span>Carne</button>
+<button type="button" class="opt" data-valor="Pescado" aria-pressed="false"><span class="box"></span>Pescado</button>
+<button type="button" class="opt" data-valor="Vegetariano" aria-pressed="false"><span class="box"></span>Vegetariano</button>
+<button type="button" class="opt" data-valor="Vegano" aria-pressed="false"><span class="box"></span>Vegano</button>
+<button type="button" class="opt" data-valor="Sin preferencia" aria-pressed="false"><span class="box"></span>Sin preferencia</button>
+</div>
+</div>
+
+<label class="q"><span>Tu comodidad es importante para nosotros. Si tienes alguna alergia o restricción alimentaria, cuéntanos.</span>
+<textarea id="r-alergias"></textarea>
+</label>
+
+<label class="q"><span>¿Qué canción te haría salir a la pista de baile? Nos encantaría escucharla.</span>
+<input type="text" id="r-cancion">
+</label>
+</div>
+
+<label class="q"><span>Mensaje para los novios</span>
+<textarea id="r-mensaje"></textarea>
+</label>
+
+<p class="err" id="r-error" role="alert" hidden></p>
+
+<button type="submit" class="send">Enviar</button>
+</form>
+
+<div class="thanks" id="r-gracias" hidden style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; padding: 30px 0">
+<img src="assets/svg/seal-oval.svg" alt="" style="width: 60px; height: 72px">
+<p class="script" style="font-size: 64px">¡Gracias!</p>
+<p style="margin: 0; font-size: 21px; font-style: italic; color: #3C3B33">Se abrió WhatsApp con tu confirmación.<br>Solo presiona enviar ahí.</p>
+<button type="button" id="r-editar" class="sc" style="min-height: 44px; padding: 0 16px; border: none; background: none; cursor: pointer; font-size: 14px; color: #5A2A2B; text-decoration: underline; text-underline-offset: 4px">Editar mis respuestas</button>
+<a href="inicio.html" class="sc" style="min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; color: #45432B">← Volver a la invitación</a>
+</div>
+</div>
+</section>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/confirmar.js"></script>
+</body>
+</html>

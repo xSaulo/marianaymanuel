@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mariana &amp; Manuel · Una carta de amor</title>
+  <meta name="description" content="Una carta de amor de Mariana & Manuel. Abre tu invitación.">
+  <meta name="theme-color" content="#45432B">
+
+  <!-- Vista previa al compartir (WhatsApp). Cambia TU-USUARIO y TU-REPOSITORIO (ver README). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariana & Manuel · Una carta de amor">
+  <meta property="og:description" content="Toca el sello para abrir tu invitación">
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/assets/img/vista-previa.jpg">
+  <meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bloqueado">
+
+  <!-- =====================================================
+       1. SOBRE DE ENTRADA
+       ===================================================== -->
+  <section class="sobre" id="sobre" aria-label="Sobre de la invitación">
+    <div class="sobre__escenario" id="escenario">
+      <svg class="sobre__pliegues" id="pliegues" aria-hidden="true">
+        <path id="pliegue-oscuro" stroke="#2A2818" stroke-opacity="0.6" stroke-width="2" fill="none"/>
+        <path id="pliegue-claro" stroke="#6E6B4A" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+      </svg>
+      <div class="sobre__solapa-sombra"><div class="sobre__solapa" id="solapa"></div></div>
+      <div class="sobre__encaje" id="encaje-izq"></div>
+      <div class="sobre__encaje" id="encaje-der"></div>
+      <button class="sello" id="sello" type="button" aria-label="Abrir la invitación">
+        <img src="assets/svg/seal-oval.svg" alt="">
+        <span>M &amp; M</span>
+      </button>
+    </div>
+
+    <div class="sobre__texto" id="texto-sobre">
+      <p class="sc sobre__de" aria-label="Una carta de amor de"><span id="linea1"></span><span class="oculto" id="resto1">Una carta de amor de</span></p>
+      <p class="script sobre__nombres" aria-label="Mariana y Manuel"><span id="linea2"></span><span class="oculto" id="resto2">Mariana &amp; Manuel</span></p>
+    </div>
+
+    <div class="sobre__texto" id="texto-abrir">
+      <button class="sobre__abrir" id="abrir" type="button">Abrir la invitación</button>
+    </div>
+  </section>
+
+  <div class="destello" id="destello" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       2. INVITACIÓN
+       ===================================================== -->
+  <main id="invitacion">
+
+    <!-- Sobre abierto con tarjeta, marco, corazón y flores -->
+    <section class="portada" id="portada">
+      <div class="escena" id="escena">
+        <img class="pieza peonia sube" src="assets/svg/peony-emboss.svg" alt="">
+
+        <div class="pieza tarjeta-fecha sube-2">
+          <div class="tarjeta-fecha__interior">
+            <p class="sc">Reserva la fecha</p>
+            <p class="script nombre" style="margin-top:22px">Mariana</p>
+            <p class="script y">&amp;</p>
+            <p class="script nombre">Manuel</p>
+          </div>
+        </div>
+
+        <div class="pieza marco sube">
+          <div class="marco__foto">
+            <!-- Para poner la foto: reemplaza el <p> por <img src="assets/img/foto.jpg" alt="Mariana y Manuel"> -->
+            <p class="sc">Foto de los novios</p>
+          </div>
+          <img src="assets/svg/photo-frame.svg" alt="">
+        </div>
+
+        <div class="pieza corazon sube-3">
+          <img src="assets/svg/heart-badge.svg" alt="">
+          <p id="fecha-corta">00.00.0000</p>
+        </div>
+
+        <div class="pieza bolsillo">
+          <div class="bolsillo__frente olivo-papel"></div>
+          <div class="bolsillo__solapa olivo-papel"></div>
+          <svg aria-hidden="true" viewBox="0 0 700 400" preserveAspectRatio="none">
+            <path d="M0 0 L350 136 L700 0" stroke="#2A2818" stroke-opacity=".5" stroke-width="2" fill="none"/>
+            <path d="M0 400 L350 168 L700 400" stroke="#2A2818" stroke-opacity=".45" stroke-width="2" fill="none"/>
+            <path d="M2 398 L350 170 L698 398" stroke="#6E6B4A" stroke-opacity=".35" stroke-width="1" fill="none" transform="translate(0 3)"/>
+          </svg>
+          <img class="bolsillo__sello" src="assets/svg/seal-oval.svg" alt="">
+        </div>
+
+        <img class="pieza ramo florece" src="assets/svg/bouquet.svg" alt="">
+      </div>
+    </section>
+
+    <!-- Nos vemos en -->
+    <section class="seccion" style="padding-top:40px">
+      <div class="arco burdeos-papel revelar">
+        <img class="arco__sello" src="assets/svg/seal-oval.svg" alt="">
+        <p class="sc oro texto-sc">Nos vemos en</p>
+        <h1 class="script arco__lugar" style="margin:0">[Lugar], [Ciudad]</h1>
+        <p class="sc arco__fecha"><span id="fecha-larga">[Fecha]</span><br><span id="hora-texto">[Hora]</span></p>
+        <p class="sc oro arco__nota">La invitación formal llegará pronto.</p>
+
+        <div class="cuenta" aria-label="Cuenta regresiva">
+          <div><span class="n" id="cd-dias">000</span><span class="l">Días</span></div><span class="c">:</span>
+          <div><span class="n" id="cd-horas">00</span><span class="l">Horas</span></div><span class="c">:</span>
+          <div><span class="n" id="cd-min">00</span><span class="l">Minutos</span></div><span class="c">:</span>
+          <div><span class="n" id="cd-seg">00</span><span class="l">Segundos</span></div>
+        </div>
+
+        <a class="boton" id="boton-direccion" href="#" target="_blank" rel="noopener" style="margin-top:54px">Compártenos tu dirección aquí</a>
+      </div>
+      <p class="sc despedida revelar">Esperamos con ilusión celebrar juntos.</p>
+    </section>
+
+    <!-- Confirmación -->
+    <section class="seccion" id="confirmar" style="padding-top:20px;padding-bottom:110px">
+      <div class="rsvp burdeos-papel revelar">
+        <p class="sc oro" style="font-size:14px">R.S.V.P.</p>
+        <h2 class="script rsvp__titulo" style="margin:10px 0 0">Confirma tu asistencia</h2>
+        <img class="rsvp__sello" src="assets/svg/seal-oval.svg" alt="">
+
+        <form class="formulario" id="form-rsvp" novalidate>
+          <label class="campo" id="campo-nombre">Nombre completo
+            <input type="text" id="rsvp-nombre" autocomplete="name" required>
+            <span class="campo__error">Por favor escribe tu nombre completo.</span>
+          </label>
+          <label class="campo">Mensaje para los novios
+            <textarea id="rsvp-mensaje" rows="5"></textarea>
+          </label>
+          <button class="boton" type="submit">Enviar confirmación</button>
+        </form>
+
+        <div class="gracias" id="rsvp-gracias" hidden>
+          <p class="script">¡Gracias!</p>
+          <p>Se abrió WhatsApp con tu confirmación.<br>Solo presiona enviar ahí.</p>
+          <button class="enlace" type="button" id="rsvp-editar">Editar mis datos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descubre más: enlaces a las demás secciones -->
+    <section class="seccion explora" id="secciones">
+      <img src="assets/svg/swans-burdeos.svg" alt="" class="explora__cisnes">
+      <h2 class="script explora__titulo">Descubre más</h2>
+      <p class="sc explora__sub">Toca una tarjeta para abrir cada sección</p>
+      <nav class="explora__grid" aria-label="Secciones de la invitación">
+        <a class="explora__tarjeta burdeos-papel" href="detalles.html"><span class="sc oro">Fecha, lugar y más</span><span class="script">Los detalles</span><span class="sc explora__toca">Toca aquí</span></a>
+        <a class="explora__tarjeta explora__tarjeta--olivo" href="confirmar.html"><span class="sc oro">R.S.V.P.</span><span class="script">Confirma tu asistencia</span><span class="sc explora__toca">Toca aquí</span></a>
+        <a class="explora__tarjeta explora__tarjeta--marfil" href="historia.html"><span class="sc">Cómo empezó todo</span><span class="script">Nuestra historia</span><span class="sc explora__toca">Toca aquí</span></a>
+        <a class="explora__tarjeta burdeos-papel" href="revelar.html"><span class="sc oro">Una sorpresa</span><span class="script">Presiona para revelar</span><span class="sc explora__toca">Toca aquí</span></a>
+      </nav>
+      <a class="boton" href="inicio.html" style="margin-top:40px">Ver la invitación photo booth</a>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       3. PIE
+       ===================================================== -->
+  <footer class="pie">
+    <img class="pie__fondo" src="assets/svg/footer-meadow.svg" alt="">
+    <div class="pie__contenido">
+      <p class="sc oro" style="font-size:15px">Con amor</p>
+      <div class="monograma">
+        <img src="assets/svg/monogram-frame.svg" alt="">
+        <p class="script">M<br><span>&amp;</span><br>M</p>
+      </div>
+      <p class="sc pie__contacto">Si tienes alguna pregunta, escríbele a la novia y al novio:<br>[correo o WhatsApp]</p>
+      <button class="enlace sc" type="button" id="volver">Volver a la invitación</button>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
