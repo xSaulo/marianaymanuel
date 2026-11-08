@@ -244,6 +244,31 @@ img { max-width: none; }
 .revelar { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
 .revelar.visible { opacity: 1; transform: none; }
 
+
+/* =========================================================
+   DESCUBRE MÁS (enlaces a las demás páginas)
+   ========================================================= */
+.explora { padding-top: 10px; padding-bottom: 100px; }
+.explora__cisnes { width: 110px; height: 96px; }
+.explora__titulo { margin: 4px 0 0; font-size: clamp(44px, 5.4vw, 64px); color: var(--tinta); }
+.explora__sub { margin-top: 8px; font-size: 14px; color: var(--burdeos); }
+.explora__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; width: 100%; max-width: 760px; margin-top: 36px; }
+.explora__tarjeta {
+  position: relative; min-height: 170px; padding: 28px 16px; border-radius: 14px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  text-decoration: none; color: #F4EADA; box-shadow: 0 14px 28px rgba(40, 16, 16, .2); transition: transform .3s ease;
+}
+.explora__tarjeta::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(201, 163, 94, .7); border-radius: 9px; pointer-events: none; }
+.explora__tarjeta:hover { transform: translateY(-4px); }
+.explora__tarjeta:focus-visible { outline: 2px solid var(--burdeos); outline-offset: 4px; }
+.explora__tarjeta .sc { font-size: 12px; }
+.explora__tarjeta .script { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.1; }
+.explora__toca { margin-top: 6px; font-size: 11px !important; color: var(--oro-texto); }
+.explora__tarjeta--olivo { background: var(--olivo) url(../assets/img/olive-paper.jpg) center / cover; }
+.explora__tarjeta--marfil { background: var(--papel) url(../assets/img/ivory-paper.jpg) center / cover; color: var(--burdeos); }
+.explora__tarjeta--marfil .explora__toca { color: var(--olivo); }
+@media (max-width: 420px) { .explora__grid { gap: 12px; } .explora__tarjeta { min-height: 150px; padding: 22px 10px; } }
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
