@@ -1,36 +1,43 @@
 # Invitación de boda · Mariana & Manuel
 
-Sitio web de una sola página en HTML, CSS y JavaScript puros. Responsive para celular, tablet y computadora.
+Sitio web en HTML, CSS y JavaScript puros. Pensado primero para celular, también funciona en tablet y computadora.
+
+## Páginas
+
+| Archivo | Qué es |
+|---|---|
+| `index.html` | Sobre de entrada (letras que se escriben) → invitación con arco burdeos, cuenta regresiva y confirmación rápida |
+| `inicio.html` | Inicio estilo photo booth: sobre abierto, tira de fotos y tarjetas que abren cada sección |
+| `detalles.html` | Fecha y lugar, vestimenta, itinerario, recepción, viaje, hospedaje, mesa de regalos y preguntas frecuentes |
+| `confirmar.html` | Formulario completo (asistencia, acompañante, menú, alergias, canción, mensaje) → WhatsApp |
+| `historia.html` | Nuestra historia con collage de fotos |
+| `revelar.html` | Caja "Presiona para revelar" |
 
 ## Estructura
 
 ```
 boda-mariana-manuel/
-├── index.html        ← contenido (sobre, invitación, formulario, pie)
-├── css/styles.css    ← colores, texturas, animaciones y responsive
-├── js/main.js        ← sobre, letras que se escriben, cuenta regresiva, WhatsApp
-├── assets/
-│   ├── img/          ← texturas de papel y vista-previa.jpg
-│   └── svg/          ← sello, encaje, marco, peonía, corazón, ramo, pradera, monograma
-├── .nojekyll
-└── README.md
+├── index.html, inicio.html, detalles.html, confirmar.html, historia.html, revelar.html
+├── css/        ← un archivo de estilos por página (styles.css es el de index.html)
+├── js/
+│   ├── config.js   ← ⭐ fecha, WhatsApp y enlace de dirección (edita aquí)
+│   ├── comun.js    ← fechas, cuenta regresiva y WhatsApp compartidos
+│   └── main.js, inicio.js, detalles.js, confirmar.js, revelar.js
+├── assets/img/ y assets/svg/   ← texturas, sellos, encaje, flores, cisnes, bandeja, pastel
+└── .nojekyll
 ```
 
-## Antes de publicar: datos por completar
+## Datos por completar
 
-1. **`js/main.js`** (al inicio, en `CONFIG`):
-   - `fecha`: fecha y hora reales de la boda (ej. `'2027-06-19T16:00:00-06:00'`). Con esto se actualizan solos el corazón, el texto de la fecha y la cuenta regresiva.
-   - `whatsapp`: número que recibe las confirmaciones, con código de país (ej. `'50688887777'`).
-   - `enlaceDireccion`: a dónde lleva el botón "Compártenos tu dirección aquí".
-2. **`index.html`**:
-   - `[Lugar], [Ciudad]` → el lugar de la boda.
-   - `[correo o WhatsApp]` en el pie → el contacto de los novios.
-   - Foto del marco ovalado: guarda la foto en `assets/img/foto.jpg` y reemplaza `<p class="sc">Foto de los novios</p>` por `<img src="assets/img/foto.jpg" alt="Mariana y Manuel">`.
-   - `TU-USUARIO` y `TU-REPOSITORIO` en las líneas `og:image` y `og:url` (vista previa en WhatsApp).
+1. **`js/config.js`**: `fecha`, `whatsapp` (con código de país, ej. `50688887777`) y `enlaceDireccion`. La fecha se actualiza sola en todas las páginas.
+2. **Textos entre corchetes** `[ ... ]` en los `.html`: lugares, direcciones, horas del itinerario, historia, preguntas frecuentes, hospedaje, etc.
+3. **Fotos**: guárdalas en `assets/img/` y reemplaza cada bloque `<div class="photo">…<span>Foto …</span></div>` por la imagen, por ejemplo:
+   `<div class="photo"><img src="assets/img/foto1.jpg" alt="Mariana y Manuel" style="width:100%;height:100%;object-fit:cover"></div>`
+4. **Vista previa en WhatsApp** (`index.html`): cambia `TU-USUARIO` y `TU-REPOSITORIO` en `og:image` y `og:url`.
 
 ## Publicar en GitHub Pages
 
 1. Crea un repositorio **público** (ej. `mariana-y-manuel`).
-2. *Add file → Upload files*: arrastra **el contenido** de esta carpeta (que `index.html` quede en la raíz) y presiona *Commit changes*.
-3. *Settings → Pages* → *Deploy from a branch* → rama **main**, carpeta **/ (root)** → *Save*.
-4. En 1–2 minutos estará en `https://TU-USUARIO.github.io/mariana-y-manuel/`.
+2. *Add file → Upload files*: arrastra **el contenido** de esta carpeta (que `index.html` quede en la raíz) → *Commit changes*.
+3. *Settings → Pages* → *Deploy from a branch* → **main** / **(root)** → *Save*.
+4. En 1–2 minutos: `https://TU-USUARIO.github.io/mariana-y-manuel/`

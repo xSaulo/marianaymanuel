@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mariana &amp; Manuel · Una sorpresa</title>
+  <meta name="description" content="Presiona para revelar">
+  <meta name="theme-color" content="#45432B">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/revelar.css">
+</head>
+<body>
+<div class="pg" id="revelar">
+<p class="sc" style="font-size: clamp(14px,1.4vw,17px); color: #5A2A2B">Únete a nosotros en la boda de</p>
+<h1 class="script" style="margin-top: 10px; font-size: clamp(56px,7vw,92px)">Mariana &amp; Manuel</h1>
+
+<div class="box">
+<div class="base"></div>
+<div class="inside">
+<div class="mini"><div></div><div></div><div></div></div>
+<div style="color: #F4EADA; text-align: left">
+<p class="sc" style="font-size: 13px; color: #DCC07E">Guarda la fecha</p>
+<p class="script" style="font-size: clamp(30px,4vw,44px); margin-top: 4px"><span data-fecha="corta">[Fecha]</span></p>
+<p class="sc" style="font-size: 12px; margin-top: 6px; color: #DCC07E">[Lugar] · [Ciudad]</p>
+</div>
+</div>
+<div class="lid">
+<p class="sc" style="position: relative; text-align: left; font-size: clamp(13px,1.6vw,16px); line-height: 1.6; color: #F0DFAF">Presiona<br>para<br>revelar</p>
+<button class="btn" type="button" id="abrir-caja" aria-label="Revelar la sorpresa"></button>
+</div>
+</div>
+
+<div class="reveal" style="margin-top: 46px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<a href="inicio.html" class="sc" style="min-height: 54px; padding: 0 34px; display: inline-flex; align-items: center; border-radius: 18px; border: 1px solid #C9A35E; background: #45432B; color: #F0DFAF; text-decoration: none; font-size: 16px; letter-spacing: .16em; box-shadow: 0 10px 22px rgba(40,40,15,.28)">Ver la invitación</a>
+<button type="button" id="cerrar-caja" class="sc" style="min-height: 44px; border: none; background: none; cursor: pointer; font-size: 13px; color: #5A2A2B; text-decoration: underline; text-underline-offset: 4px">Cerrar la caja</button>
+</div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/revelar.js"></script>
+</body>
+</html>

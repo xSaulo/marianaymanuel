@@ -2,18 +2,7 @@
    Boda Mariana & Manuel · Lógica de la invitación
    ========================================================= */
 
-/* ---------- Configuración (edita aquí) ---------- */
-const CONFIG = {
-  // Fecha y hora de la boda (con la zona horaria; -06:00 = Costa Rica)
-  fecha: '2027-06-19T16:00:00-06:00',
-
-  // Número de WhatsApp que recibe las confirmaciones (con código de país, sin + ni espacios).
-  // Si lo dejas vacío, WhatsApp pedirá elegir a quién enviar el mensaje.
-  whatsapp: '',
-
-  // Enlace del botón "Compártenos tu dirección aquí" (formulario, WhatsApp, etc.)
-  enlaceDireccion: '#'
-};
+/* La configuración (fecha, WhatsApp, enlace) está en js/config.js */
 
 const $ = (id) => document.getElementById(id);
 const dos = (n) => String(n).padStart(2, '0');
@@ -138,9 +127,13 @@ $('volver').addEventListener('click', volverAlSobre);
    4. Escena del sobre abierto: se escala al ancho de pantalla
    ========================================================= */
 function ajustarEscena() {
-  const escala = Math.min((window.innerWidth - 16) / 900, Math.max(1, window.innerHeight / 760), 1.3);
-  $('escena').style.transform = `translateX(-50%) scale(${escala})`;
-  portada.style.height = Math.round(56 + 820 * escala) + 'px';
+  const vw = window.innerWidth;
+  const movil = vw < 700;   // en celular: composición vertical más grande y legible
+  const escala = movil ? (vw - 6) / 600 : Math.min((vw - 16) / 900, Math.max(1, window.innerHeight / 760), 1.3);
+  const escena = $('escena');
+  escena.classList.toggle('movil', movil);
+  escena.style.transform = `translateX(-50%) scale(${escala})`;
+  portada.style.height = Math.round(56 + (movil ? 740 : 820) * escala) + 'px';
 }
 
 /* =========================================================

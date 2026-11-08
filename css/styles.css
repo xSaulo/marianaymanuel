@@ -93,7 +93,7 @@ img { max-width: none; }
 /* =========================================================
    2. SOBRE ABIERTO (portada de la invitación)
    ========================================================= */
-.portada { position: relative; }
+.portada { position: relative; overflow: hidden; }
 .escena { position: absolute; left: 50%; top: 56px; width: 900px; height: 720px; transform-origin: 50% 0; }
 .pieza { position: absolute; }
 .olivo-papel { background: var(--olivo) url(../assets/img/olive-paper.jpg) center / cover; }
@@ -132,10 +132,19 @@ img { max-width: none; }
 .bolsillo { left: 60px; top: 300px; width: 700px; height: 400px; filter: drop-shadow(0 22px 30px rgba(40, 40, 15, .35)); }
 .bolsillo__frente { position: absolute; inset: 0; clip-path: polygon(0 0, 50% 34%, 100% 0, 100% 100%, 0 100%); }
 .bolsillo__solapa { position: absolute; inset: 0; clip-path: polygon(0 100%, 50% 42%, 100% 100%); filter: brightness(1.07); }
-.bolsillo svg { position: absolute; left: 0; top: 0; }
-.bolsillo__sello { position: absolute; left: 300px; top: 205px; width: 100px; height: 120px; filter: drop-shadow(0 6px 8px rgba(20, 20, 8, .4)); }
+.bolsillo svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.bolsillo__sello { position: absolute; left: calc(50% - 50px); top: 205px; width: 100px; height: 120px; filter: drop-shadow(0 6px 8px rgba(20, 20, 8, .4)); }
 
 .ramo { left: 600px; top: 120px; width: 300px; height: 600px; }
+
+/* Celular: composición vertical (la activa js/main.js) */
+.escena.movil { width: 600px; }
+.escena.movil .peonia { left: -10px; }
+.escena.movil .tarjeta-fecha { left: 262px; top: 10px; }
+.escena.movil .marco { left: 18px; }
+.escena.movil .corazon { left: 40px; }
+.escena.movil .bolsillo { left: 0; width: 600px; }
+.escena.movil .ramo { left: 400px; top: 150px; width: 230px; height: 460px; }
 
 /* Animación al entrar: las piezas suben desde dentro del sobre */
 .entrar .sube { animation: subir 1.8s cubic-bezier(.2, .7, .2, 1) .5s both; }
