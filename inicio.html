@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mariana &amp; Manuel · Inicio</title>
+  <meta name="description" content="Invitación de boda de Mariana y Manuel">
+  <meta name="theme-color" content="#45432B">
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+<div class="pg">
+
+<nav class="nav" aria-label="Navegación">
+<a href="index.html">← Volver al sobre</a>
+<a href="confirmar.html">R.S.V.P.</a>
+</nav>
+
+<!-- 1. Sobre abierto con invitación y tira de fotos -->
+<section class="hero" id="hero">
+<div class="scene" id="escena">
+<div id="escena-int" style="position: absolute; left: 0; top: 0; width: 1000px; height: 720px">
+<!-- solapa abierta con forro de foto -->
+<div class="p olivo" style="left: 150px; top: 40px; width: 600px; height: 230px; clip-path: polygon(0 100%, 50% 0, 100% 100%)"></div>
+<div class="p photo" style="left: 180px; top: 70px; width: 540px; height: 200px; clip-path: polygon(0 100%, 50% 0, 100% 100%); align-items: flex-end; padding-bottom: 40px"><span>Foto del forro</span></div>
+<!-- fondo del sobre -->
+<div class="p olivo" style="left: 150px; top: 268px; width: 600px; height: 380px; box-shadow: 0 24px 40px rgba(40,40,15,.3)"></div>
+<!-- invitación -->
+<div class="p rise" style="left: 250px; top: 150px; width: 380px; height: 470px; transform: rotate(-4deg)">
+<div style="position: absolute; inset: 0; background: #F6F4EE url(assets/img/ivory-paper.jpg) center/cover; clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 22px, 100% calc(100% - 22px), calc(100% - 22px) 100%, 22px 100%, 0 calc(100% - 22px), 0 22px); box-shadow: 0 10px 20px rgba(40,40,15,.2)"></div>
+<div style="position: absolute; inset: 14px; border: 1px solid #C9A35E"></div>
+<div style="position: absolute; inset: 20px; border: 1px solid rgba(201,163,94,.45)"></div>
+<div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; padding-top: 56px; text-align: center">
+<p class="sc" style="font-size: 14px; color: #5A2A2B; line-height: 1.6">Estás invitado a<br>la boda de</p>
+<p class="script" style="margin-top: 16px; font-size: 60px; color: #2F2E28">Mariana &amp;</p>
+<p class="script" style="font-size: 60px; color: #2F2E28">Manuel</p>
+<p class="sc" style="margin-top: 22px; font-size: 15px; color: #45432B"><span data-fecha="corta-texto">[Fecha]</span></p>
+<p class="sc" style="margin-top: 6px; font-size: 13px; color: #45432B">[Lugar] · [Ciudad]</p>
+</div>
+</div>
+<!-- bolsillo frontal -->
+<div class="p olivo" style="left: 150px; top: 430px; width: 600px; height: 218px; clip-path: polygon(0 0, 50% 45%, 100% 0, 100% 100%, 0 100%); filter: brightness(1.06)"></div>
+<svg class="p" aria-hidden="true" width="600" height="218" viewBox="0 0 600 218" style="left: 150px; top: 430px"><path d="M0 0 L300 98 L600 0" stroke="#2A2818" stroke-opacity=".5" stroke-width="2" fill="none"></path></svg>
+<img class="p" src="assets/img/sello.webp" alt="" style="left: 405px; top: 500px; width: 90px; height: 90px; filter: drop-shadow(0 6px 8px rgba(20,20,8,.4))">
+<!-- tira de fotos -->
+<div class="p strip" id="tira" style="left: 700px; top: 110px; width: 150px; height: 520px; background: #FBFAF6; padding: 12px 12px 40px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 16px 28px rgba(40,30,15,.25); transform: rotate(7deg)">
+<div class="photo" style="flex: 1"><span>Foto 1</span></div>
+<div class="photo" style="flex: 1"><span>Foto 2</span></div>
+<div class="photo" style="flex: 1"><span>Foto 3</span></div>
+<div class="photo" style="flex: 1"><span>Foto 4</span></div>
+</div>
+<!-- amaranto que cae por el borde del sobre -->
+<img class="p cae" src="assets/img/amaranto.webp" alt="" id="amaranto" style="left: 98px; top: 252px; width: 112px; height: 466px">
+</div>
+</div>
+</section>
+
+<!-- 2. Collage: las piezas abren cada sección -->
+<section class="collage" aria-label="Secciones de la invitación" style="height: 1380px" id="collage">
+<div class="mesa" style="transform: translateX(-50%)" id="mesa">
+
+<!-- disco: al tocarlo gira y suena nuestra canción -->
+<p class="p nota" style="left: 6px; top: 0px; width: 220px; font-size: 21px; transform: rotate(-4deg)" id="disco-nota">♪ Toca el disco</p>
+<button class="p disco" type="button" id="disco" aria-label="Escuchar nuestra canción" aria-pressed="false" style="left: 8px; top: 24px; width: 208px; height: 208px">
+<div class="vinilo"><img src="assets/img/disco.webp" alt=""><span class="etq">M &amp; M</span></div>
+</button>
+
+<!-- bandeja con fotos -->
+<img class="p" src="assets/img/bandeja.webp" alt="" style="left: 34px; top: 168px; width: 430px; height: 323px; transform: rotate(-5deg)">
+<div class="p pola" style="left: 110px; top: 190px; width: 170px; transform: rotate(-11deg)"><div class="photo" style="height: 150px"><span>Foto 1</span></div></div>
+<div class="p pola" style="left: 235px; top: 235px; width: 170px; transform: rotate(7deg); z-index: 3"><div class="photo" style="height: 150px"><span>Foto 2</span></div></div>
+
+<!-- Los detalles: tarjeta de encaje -->
+<a class="p card det" href="detalles.html" aria-label="Ver los detalles" style="left: 300px; top: 0px; width: 290px; height: 328px; transform: rotate(7deg)">
+<img src="assets/img/lace-card.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<div style="position: absolute; left: 14%; right: 33%; top: 15%; bottom: 15%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center">
+<p class="script" style="font-size: 44px; line-height: .9; color: #4A2E22">Los<br>detalles</p>
+<div style="width: 46%; height: 1px; background: #C9A35E; margin: 12px 0"></div>
+<p class="tocar" style="font-size: 11px; color: #5A2A2B">Toca aquí</p>
+</div>
+</a>
+
+<!-- Confirma tu asistencia: sobre -->
+<a class="p card" href="confirmar.html" aria-label="Confirmar asistencia" style="left: 14px; top: 490px; width: 350px; height: 236px; transform: rotate(-5deg)">
+<div class="burdeos" style="position: absolute; inset: 0; border-radius: 4px"></div>
+<div class="burdeos" style="position: absolute; inset: 0; clip-path: polygon(0 0, 100% 0, 50% 52%); filter: brightness(1.18)"></div>
+<svg aria-hidden="true" width="350" height="236" viewBox="0 0 350 236" style="position: absolute; left: 0; top: 0"><path d="M0 0 L175 123 L350 0 M0 236 L144 113 M350 236 L206 113" stroke="#2A1012" stroke-opacity=".5" stroke-width="1.5" fill="none"></path><rect x="7" y="7" width="336" height="222" fill="none" stroke="#C9A35E" stroke-opacity=".5"></rect></svg>
+<div style="position: absolute; left: 0; right: 0; top: 134px; text-align: center; color: #F1E8DA">
+<p class="script" style="font-size: 38px">Confirma tu asistencia</p>
+<p class="tocar" style="margin-top: 6px; color: #DCC07E">Toca aquí</p>
+</div>
+<img src="assets/img/sello.webp" alt="" style="position: absolute; left: 152px; top: 88px; width: 46px; height: 46px; filter: drop-shadow(0 4px 5px rgba(20,20,8,.4))">
+</a>
+<div class="p pola" style="left: 360px; top: 450px; width: 220px; transform: rotate(6deg)"><div class="photo" style="height: 200px"><span>Foto polaroid</span></div></div>
+
+<!-- flores que asoman detrás del arco -->
+<img class="p" src="assets/svg/bouquet.svg" alt="" style="left: 300px; top: 610px; width: 170px; height: 340px; transform: rotate(16deg); pointer-events: none; filter: drop-shadow(0 8px 10px rgba(40,30,15,.2))">
+<!-- Nuestra historia: tarjeta en arco -->
+<a class="p card" href="historia.html" aria-label="Leer nuestra historia" style="left: 296px; top: 760px; width: 284px; height: 390px; transform: rotate(3deg)">
+<div style="position: absolute; inset: 0; background: #F6F4EE url(assets/img/ivory-paper.jpg) center/cover; border-radius: 142px 142px 10px 10px"></div>
+<div style="position: absolute; inset: 10px; border: 1px solid #C9A35E; border-radius: 132px 132px 6px 6px"></div>
+<div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-top: 30px">
+<p class="script" style="font-size: 50px; line-height: .95; color: #5A2A2B">Nuestra<br>historia</p>
+<p class="tocar" style="margin-top: 14px; color: #45432B">Toca aquí</p>
+<img src="assets/svg/swans-burdeos.svg" alt="" style="margin-top: 14px; width: 110px; height: 96px">
+</div>
+</a>
+
+<div class="p pola" style="left: 18px; top: 790px; width: 240px; transform: rotate(-7deg)"><div class="photo" style="height: 220px"><span>Foto polaroid</span></div></div>
+<img class="p" src="assets/img/sello.webp" alt="" style="left: 172px; top: 1012px; width: 72px; height: 72px; transform: rotate(-8deg); filter: drop-shadow(0 6px 8px rgba(20,20,8,.4))">
+
+<!-- Presiona para revelar -->
+<a class="p card" href="revelar.html" aria-label="Abrir la sorpresa" style="left: 40px; top: 1110px; width: 236px; height: 236px; transform: rotate(-4deg)">
+<div class="burdeos" style="position: absolute; inset: 0; border-radius: 10px"></div>
+<div style="position: absolute; inset: 10px; border: 1px solid #C9A35E; border-radius: 6px"></div>
+<div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #F1E8DA">
+<p class="sc" style="font-size: 12px; color: #DCC07E">Una sorpresa</p>
+<p class="script" style="font-size: 38px; margin-top: 8px">Presiona<br>para revelar</p>
+<p class="tocar" style="margin-top: 10px; color: #DCC07E">Toca aquí</p>
+</div>
+</a>
+
+</div>
+<iframe class="yt" id="yt-mm" src="https://www.youtube.com/embed/066HZlam91Y?enablejsapi=1&amp;playsinline=1&amp;loop=1&amp;playlist=066HZlam91Y&amp;controls=0&amp;rel=0" allow="autoplay; encrypted-media" title="Nuestra canción" tabindex="-1" aria-hidden="true"></iframe>
+</section>
+
+<!-- 3. Con amor + cuenta regresiva -->
+<section style="padding: 80px 20px 110px; display: flex; flex-direction: column; align-items: center; text-align: center">
+<img src="assets/img/sello.webp" alt="" style="width: 60px; height: 60px; filter: drop-shadow(0 4px 6px rgba(20,20,8,.3))">
+<p class="sc" style="margin-top: 22px; font-size: 15px; color: #5A2A2B">Con amor</p>
+<p class="script" style="margin-top: 8px; font-size: clamp(46px,6vw,76px)">Mariana &amp; Manuel</p>
+<p class="sc" style="margin-top: 10px; font-size: 16px; color: #45432B"><span data-fecha="corta-texto">[Fecha]</span></p>
+<div class="count" style="margin-top: 50px" aria-label="Cuenta regresiva">
+<div><span class="n" id="cd-dias">00</span><span class="l">Días</span></div><span class="c">:</span>
+<div><span class="n" id="cd-horas">00</span><span class="l">Horas</span></div><span class="c">:</span>
+<div><span class="n" id="cd-min">00</span><span class="l">Minutos</span></div><span class="c">:</span>
+<div><span class="n" id="cd-seg">00</span><span class="l">Segundos</span></div>
+</div>
+<p class="sc" style="margin-top: 46px; font-size: 15px; color: #45432B">¡Nos vemos en el gran día!</p>
+<a href="index.html" class="sc" style="margin-top: 26px; min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; color: #5A2A2B; text-underline-offset: 4px">← Volver al sobre</a>
+</section>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/comun.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

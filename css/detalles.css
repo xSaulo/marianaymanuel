@@ -1,0 +1,37 @@
+/* detalles · Mariana & Manuel */
+body{margin:0;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+*{box-sizing:border-box}
+.pg{position:relative;width:100%;overflow-x:hidden;background:#ECEBE6 url(../assets/img/ivory-paper.jpg) center top/cover;color:#2F2E28;font-family:'Cormorant Garamond',serif}
+.sc{font-family:'Cormorant SC',serif;letter-spacing:.14em;margin:0}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;margin:0;line-height:1.1}
+.burdeos{background:#5A2A2B url(../assets/img/ivory-paper.jpg) center/cover;background-blend-mode:multiply;color:#F1E8DA}
+.olivo{background:#45432B url(../assets/img/olive-paper.jpg) center/cover;color:#F1E8DA}
+.nav{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,48px)}
+.nav a{min-height:44px;display:inline-flex;align-items:center;text-decoration:none;font-family:'Cormorant SC',serif;letter-spacing:.14em;font-size:14px;color:#5A2A2B}
+.sec{position:relative;padding:72px 20px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.wrap{width:100%;max-width:1040px;margin:0 auto}
+.title{font-size:clamp(44px,5.4vw,68px);color:#2F2E28}
+.sub{margin-top:10px;font-size:14px;color:#5A2A2B}
+.divider{display:flex;align-items:center;gap:12px;width:220px;margin:22px auto 0}
+.divider span{flex:1;height:1px;background:#C9A35E}
+.divider i{width:9px;height:9px;transform:rotate(45deg);border:1px solid #C9A35E;display:block}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px}
+.box{position:relative;padding:36px 24px 30px;background:#F6F4EE url(../assets/img/ivory-paper.jpg) center/cover;box-shadow:0 14px 30px rgba(40,30,15,.12)}
+.box::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,163,94,.7);pointer-events:none}
+.label{font-size:13px;color:#5A2A2B}
+.big{font-size:clamp(26px,2.6vw,32px);margin-top:10px;line-height:1.2}
+.txt{font-size:19px;line-height:1.55;color:#3C3B33}
+.link{margin-top:16px;min-height:44px;padding:0 20px;display:inline-flex;align-items:center;border:1px solid #C9A35E;background:#45432B;color:#F0DFAF;border-radius:14px;text-decoration:none;font-family:'Cormorant SC',serif;letter-spacing:.12em;font-size:14px}
+.sw{width:clamp(48px,7vw,70px);height:clamp(48px,7vw,70px);border-radius:50%;box-shadow:0 0 0 2px #F6F4EE,0 0 0 3px #C9A35E,0 8px 14px rgba(40,30,15,.18)}
+.tl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px;margin-top:48px}
+.tl-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+.tl-item svg{width:72px;height:72px}
+.tl-time{font-family:'Cutive Mono',monospace;font-size:20px;color:#2F2E28}
+.faq{width:100%;max-width:760px;margin-top:40px;display:flex;flex-direction:column;gap:14px;text-align:left}
+.faq button{width:100%;min-height:58px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 22px;border:1px solid rgba(201,163,94,.7);background:#F6F4EE;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:21px;color:#2F2E28;text-align:left}
+.faq button:focus-visible{outline:2px solid #5A2A2B;outline-offset:2px}
+.faq .ans{padding:16px 22px 22px;border:1px solid rgba(201,163,94,.7);border-top:none;background:#FBFAF6;font-size:19px;line-height:1.55;color:#3C3B33}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:44px;width:100%}
+@media (max-width:860px){.grid3{grid-template-columns:minmax(0,1fr)}.two{grid-template-columns:minmax(0,1fr)}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+[hidden]{display:none!important}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mariana &amp; Manuel · Una carta de amor</title>
+  <meta name="description" content="Una carta de amor de Mariana & Manuel. Abre tu invitación.">
+  <meta name="theme-color" content="#45432B">
+
+  <!-- Vista previa al compartir (WhatsApp). Cambia TU-USUARIO y TU-REPOSITORIO (ver README). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariana & Manuel · Una carta de amor">
+  <meta property="og:description" content="Toca el sello para abrir tu invitación">
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/assets/img/vista-previa.jpg">
+  <meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bloqueado">
+
+  <!-- =====================================================
+       1. SOBRE DE ENTRADA
+       ===================================================== -->
+  <section class="sobre" id="sobre" aria-label="Sobre de la invitación">
+    <div class="sobre__escenario" id="escenario">
+      <svg class="sobre__pliegues" id="pliegues" aria-hidden="true">
+        <path id="pliegue-oscuro" stroke="#2A2818" stroke-opacity="0.6" stroke-width="2" fill="none"/>
+        <path id="pliegue-claro" stroke="#6E6B4A" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+      </svg>
+      <div class="sobre__solapa-sombra"><div class="sobre__solapa" id="solapa"></div></div>
+      <div class="sobre__encaje" id="encaje-izq"></div>
+      <div class="sobre__encaje" id="encaje-der"></div>
+      <button class="sello" id="sello" type="button" aria-label="Abrir la invitación">
+        <img src="assets/img/sello.webp" alt="">
+      </button>
+    </div>
+
+    <div class="sobre__texto" id="texto-sobre">
+      <p class="sc sobre__de" aria-label="Una carta de amor de"><span id="linea1"></span><span class="oculto" id="resto1">Una carta de amor de</span></p>
+      <p class="script sobre__nombres" aria-label="Mariana y Manuel"><span id="linea2"></span><span class="oculto" id="resto2">Mariana &amp; Manuel</span></p>
+    </div>
+
+    <div class="sobre__texto" id="texto-abrir">
+      <button class="sobre__abrir" id="abrir" type="button">Abrir la invitación</button>
+    </div>
+  </section>
+
+<!-- Apertura: el sobre se aleja, se abre y sale la invitación -->
+<div class="apertura" id="apertura" aria-hidden="true">
+<div class="ap-env">
+<div class="ap-back ap-pz"></div>
+<button class="ap-card" type="button" id="ap-card" aria-label="Invitación">
+<span class="papel"></span><span class="m1"></span><span class="m2"></span>
+<span class="tx">
+<span class="t1">Estás invitado a la boda de</span>
+<span class="t2">Mariana &amp; Manuel</span>
+<span class="t3"><span data-fecha-apertura>[Fecha]</span></span>
+<span class="t4">[Lugar] · [Ciudad]</span>
+</span>
+</button>
+<div class="ap-front ap-pz"><i></i><svg viewBox="0 0 145 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L72.5 52 L145 0" stroke="#2A2818" stroke-opacity=".5" stroke-width=".5" fill="none" vector-effect="non-scaling-stroke"></path><path d="M0 100 L60 48 M145 100 L85 48" stroke="#2A2818" stroke-opacity=".35" stroke-width=".5" fill="none" vector-effect="non-scaling-stroke"></path></svg></div>
+<div class="ap-flap"><i></i><span class="ap-lace" style="left: 0; transform: rotate(38.66deg)"></span><span class="ap-lace" style="left: 50%; top: 100%; transform: rotate(-38.66deg)"></span></div>
+<div class="ap-seal ap-pz"><img src="assets/img/sello.webp" alt=""></div>
+</div>
+</div>
+
+  <div class="destello" id="destello" aria-hidden="true"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/sobre.js"></script>
+</body>
+</html>
